@@ -1,0 +1,17 @@
+html::before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(#593da3, #553e92,#dadada);
+}
+
+.navbar {
+    color: white;
+}
+
+.container .btn {
+    background-color: #2e1e5c;
+    border-color: #2e1e5c;
+}
