@@ -1,46 +1,21 @@
 const tabela = document.querySelector('.tabela-js')
-    axios.get("http://10.109.131.195:5000/list").then((response) => {
-        exibirTask(response.data);
-    });
-
-function exibirTask(data){
-    const lista = document.getElementById("to-do-list")
-    data.map((item) => {
-        const li = document.createElement("li")
-        li.innerHTML =item.ID + " - " + item.TAREFA
-        lista.appendChild(li)  
+    axios.get('http://10.109.142.139:5000/list').then((response) => {
+        getData(response.data)
+    }).catch((error) => {
+        console.log(error)
     })
-    }
 
-function getData(dados){
-    dados.map((item)=>{
+function getData(data){
+    data.map((item) => {
         tabela.innerHTML += `
-    <tr>
-        <th scope="row" class="text-center align-middle">${item.id}</th>
-        <td class="text-center align-middle">${item.nome}</td>
-        <td class="text-center align-middle">
-            <button class="btn btn-primary" onclick="editar(${item.id})">Editar</button>
-            <button class="btn btn-danger" onclick="deletar(${item.id})">Deletar</button>
-        </td>
-    </tr>            
+        <tr>
+            <th scope="row" class="text-center align-middle">${item.ID}</th>
+            <td class="text-center align-middle">${item.TAREFA}</td>
+            <td class="text-center align-middle">
+                <span type="button" class="material-symbols-outlined text-success">edit</span>
+                <span type="button" class="material-symbols-outlined text-danger">delete</span>
+            </td>
+        </tr>       
         `
     })
 }
-
-
-/*
-
-const onClick = document.getElementById("btn-new-task"); 
-
-onClick.addEventListener("click", newTask);
-
-function newTask() {
-    const textoCapturado = document.getElementById('input-new-task').value;
-    axios.post("https://apitodo.ccadu86.repl.co/add", {
-    "Tarefa": textoCapturado
-}).then((response) => {
-    console.log(response.data);
-});
-window.location.reload();
-}
-*/
