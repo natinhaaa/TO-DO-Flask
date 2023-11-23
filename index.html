@@ -30,7 +30,7 @@
     </div>
 
     <!-- Tabela -->
-    <div class="container shadow bg-white rounded 10 gap-2 mt-5 p-3 ccol-xs-15 col-sm-5 col-md-5 col-lg-5">
+    <div class="container shadow bg-white rounded 10 gap-2 mt-5 p-3 ccol-xs-20 col-sm-7 col-md-7 col-lg-7">
         <h2 class="p-3">Lista de Tarefas</h2>
         <table class="table">
             <thead>
@@ -54,7 +54,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 
     <!-- Modal -->
-    <!-- <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -64,42 +65,21 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form id="formAdicionar">
                         <div class="mb-3">
                             <label for="recipient-name" class="col-form-label">Nova tarefa</label>
-                            <input type="text" class="form-control" id="nova-tarefa">
+                            <input type="text" class="form-control" id="nova-tarefa" >
                         </div>
                     </form>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                        <button type="button" class="btn btn-primary" onClick="addNewTask()">Adicionar</button>
+                        <button type="button" class="btn btn-primary" onclick="AdicionarTarefa()">Adicionar</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Nova Tarefa</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form class="add-js" id="formTarefa">
-                        <div class="mb-3">
-                            <label for="exampleInputName1" class="form-label">Tarefa</label>
-                            <input type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp" name="tarefa"></input>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    <button type="submit" class="btn btn-primary aa">Confirmar</button>
-                </div>
-            </div>
-        </div>
     </div>
+
 <script src="script.js"></script>
 </body>
 </html>
