@@ -65,20 +65,20 @@ function AlterarTarefa(IDAlterar) {
         }
 
         else{
-            const TarefaInserida = document.getElementById("tarefa-alterar").value;
+            const TarefaInseridaAlt = document.getElementById("tarefa-alterar").value;
     
-            if (TarefaInserida === "") {
+            if (TarefaInseridaAlt === "") {
                 alert("Insira uma nova tarefa.")
                 return;
             }
 
             else {
-                const TarefaNova = {
-                    Tarefa: TarefaInserida
+                const TarefaNovaAlt = {
+                    Tarefa: TarefaInseridaAlt
                 }
-                axios.put(URLApi + `/update/${IDAlterar}`, TarefaNova)
+                axios.put(URLApi + `/update/${IDAlterar}`, TarefaNovaAlt)
                 .then(response => {
-                    console.log(response.data.TarefaNova);
+                    console.log(response.data.TarefaNovaAlt);
                 })
                 .catch(error => {
                     console.error('Erro na requisição PUT', error);
